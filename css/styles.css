@@ -597,7 +597,68 @@ address {
   color: var(--background);
   margin-bottom: 16px;
 }
+.container3 {
+  margin-left: 80px;
+}
+.subscibe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: var(--background);
+}
 
+.form-div {
+  display: flex;
+}
+
+.form-footer input {
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 0 16px 0 16px;
+  height: 40px;
+  width: 264px;
+  background-color: transparent;
+  outline: 0;
+  transition: border-color var(--timing-cubic);
+}
+.btn-footer {
+  display: flex;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  margin-left: 24px;
+  background: var(--accent-color);
+  transition: background-color var(--timing-cubic);
+}
+.btn-submit {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--background);
+  margin-right: 16px;
+  padding: 0;
+  border: none;
+}
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+}
+.btn-footer:hover {
+  background-color: var(--hover-color);
+}
+/* Visually-hidden*/
 .visually-hidden {
   position: absolute;
   width: 1px;
