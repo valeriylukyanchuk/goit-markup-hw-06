@@ -681,33 +681,22 @@ address {
 
 /* FORM */
 .modal-title {
-  margin-bottom: 16px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
-  color: var(--mini-titles-color);
-}
-
-.modal-form-input {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  color: #2e2f42;
   margin-bottom: 16px;
 }
-.modal-input-wrapper {
-  display: flex;
-  flex-direction: column;
-  column-gap: 4px;
+.modal-input-icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
 }
-.modal-label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #434455;
-  margin-bottom: 4px;
-}
-.modal-input-container {
+.input-wrap {
   position: relative;
 }
 .modal-input {
@@ -720,94 +709,54 @@ address {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--brand-color);
-  transition: border-color 250ms var(--timing-cubic);
+  transition: border-color var(--timing-cubic);
+  outline: transparent;
 }
 
-.modal-input-icon {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  transition: fill 250ms var(--action);
+.modal-label-text {
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
-.modal-textarea {
-  padding: 8px 16px;
+.modal-field {
+  margin-bottom: 8px;
+}
+
+.modal-input:focus {
+  border-color: var(--hover-color);
+}
+.modal-input:focus + .modal-input-icon {
+  fill: var(--hover-color);
+}
+
+.modal-texarea {
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+  outline: transparent;
+  background-color: transparent;
   resize: none;
+  border-radius: 4px;
+  padding: 8px 16px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--brand-color);
 }
 
-.modal-policy-label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
+.modal-texarea:focus {
+  border-color: var(--hover-color);
 }
-.policy-input {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-.policy-checkbox {
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--brand-color);
-  border-radius: 2px;
-  transition: background-color var(--timing-cubic),
-    background-image var(--timing-cubic), border var(--timing-cubic);
-}
-
-.modal-policy-text {
-  margin-left: 8px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--border);
-}
-.policy-input:checked + .policy-checkbox {
-  border-color: transparent;
-  background-color: var(--hover-color);
-  background-image: url(../images/clikchekbox.svg);
-  background-repeat: no-repeat;
-  background-size: 10px 8px;
-  background-position: center;
-  background-origin: border-box;
-}
-
-.modal-policy-link {
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-
-.modal-send-btn:hover,
-.modal-send-btn:focus {
-  background-color: var(--hover-color);
-}
-
-.modal-send-btn {
+.modal-btn-send {
   display: block;
   width: 169px;
   height: 56px;
   margin: 0 auto;
   text-align: center;
   padding: 16px 32px;
-}
-.button {
   border: none;
   border-radius: 4px;
-  background-color: #404bbf;
+  background-color: var(--accent-color);
   color: var(--background);
   font-family: inherit;
   font-weight: 500;
@@ -815,23 +764,46 @@ address {
   line-height: 1.5;
   letter-spacing: 0.04em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms var(--action);
+  transition: background-color var(--timing-cubic);
 }
 
-.modal-input:hover {
-  color: var(--hover-color);
-  border: 1px solid var(--hover-color);
+.modal-btn-send:hover {
+  background-color: var(--hover-color);
 }
-.button {
-  border: none;
-  border-radius: 4px;
-  background-color: var(--accent-color);
-  color: var(--hero-title-buttons);
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 16px 0 24px 0;
+  cursor: pointer;
+}
+.checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--primary-text-color);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color var(--timing-cubic);
+}
+
+.checkbox-paragraph {
+  line-height: 1.33;
   letter-spacing: 0.04em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--timing-cubic);
+  margin: 0 0 0 8px;
+}
+.form-p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.166;
+  color: rgba(142, 143, 153, 1);
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.checkbox:checked {
+  background-image: url(../images/Chekboxsvg.svg);
+  border: none;
+  width: 16px;
+  height: 16px;
 }
