@@ -697,7 +697,7 @@ address {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   padding: 72px 24px 24px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -778,6 +778,7 @@ address {
   display: inline-block;
   font-size: 12px;
   margin-bottom: 5px;
+  color: #8e8f99;
 }
 
 .modal-field {
@@ -834,7 +835,8 @@ address {
 .label-checkbox {
   display: flex;
   align-items: center;
-  margin: 16px 0 24px 0;
+  margin-top: 16px;
+  margin-bottom: 24px;
   cursor: pointer;
 }
 .checkbox {
@@ -859,8 +861,6 @@ address {
   font-size: 12px;
   line-height: 1.166;
   color: rgba(142, 143, 153, 1);
-  margin-top: 8px;
-  margin-bottom: 4px;
 }
 .checkbox:checked {
   background-image: url(../images/Chekboxsvg.svg);
