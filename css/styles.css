@@ -859,6 +859,7 @@ address {
   color: #8e8f99;
   margin-top: 16px;
   margin-bottom: 24px;
+  align-items: center;
 }
 
 .modal-check:checked + .check-text::before {
