@@ -855,7 +855,6 @@ address {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-top: 16px;
@@ -873,4 +872,8 @@ address {
 
 .a-text {
   text-decoration: underline;
+}
+
+.placeholder {
+  color: rgba(46, 47, 66, 0.4);
 }
